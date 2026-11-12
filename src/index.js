@@ -1,0 +1,14 @@
+export { VERSION } from './version.js';
+export { main } from './cli.js';
+export { buildSummary } from './model/aggregate.js';
+export { adaptReport } from './adapters/index.js';
+export { identifyReport } from './input/identify.js';
+export { collectInputs } from './input/collect.js';
+export { parseJsonText, readReportFile, InputError } from './input/read.js';
+export { redactText } from './security/redact.js';
+export { escapeHtml, escapeXml } from './security/escape.js';
+export { renderSummaryJson } from './render/json.js';
+export { renderSummaryMarkdown } from './render/markdown.js';
+export { renderSummaryTerminal } from './render/terminal.js';
+export { renderDashboardHtml } from './render/html.js';
+export { renderBadge, buildBadges } from './render/svg.js';

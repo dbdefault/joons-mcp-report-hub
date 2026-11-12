@@ -1,0 +1,80 @@
+{
+  "format": "joons-mcp-policy-gate/result",
+  "schemaVersion": 1,
+  "verdict": "FAIL",
+  "date": "2027-01-01",
+  "policy": {
+    "name": "Survey fail policy",
+    "policyVersion": 1
+  },
+  "snapshot": {
+    "label": "project-tracker",
+    "server": {
+      "name": "project-tracker",
+      "version": "1.0.0"
+    },
+    "toolCount": 8
+  },
+  "summary": {
+    "tools": 8,
+    "fail": 5,
+    "warn": 0,
+    "rules": [
+      "approval_unused",
+      "tool_denied"
+    ]
+  },
+  "findings": [
+    {
+      "rule": "tool_denied",
+      "level": "fail",
+      "tool": "create_issue",
+      "class": null,
+      "message": "Tool matches a deny pattern.",
+      "detail": {
+        "pattern": "*_issue"
+      }
+    },
+    {
+      "rule": "tool_denied",
+      "level": "fail",
+      "tool": "delete_issue",
+      "class": null,
+      "message": "Tool matches a deny pattern.",
+      "detail": {
+        "pattern": "*_issue"
+      }
+    },
+    {
+      "rule": "tool_denied",
+      "level": "fail",
+      "tool": "get_issue",
+      "class": null,
+      "message": "Tool matches a deny pattern.",
+      "detail": {
+        "pattern": "*_issue"
+      }
+    },
+    {
+      "rule": "tool_denied",
+      "level": "fail",
+      "tool": "update_issue",
+      "class": null,
+      "message": "Tool matches a deny pattern.",
+      "detail": {
+        "pattern": "*_issue"
+      }
+    },
+    {
+      "rule": "tool_denied",
+      "level": "fail",
+      "tool": "watch_issue",
+      "class": null,
+      "message": "Tool matches a deny pattern.",
+      "detail": {
+        "pattern": "*_issue"
+      }
+    }
+  ],
+  "classifications": []
+}

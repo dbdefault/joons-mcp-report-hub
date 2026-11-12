@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "tool": {
+    "name": "joons-mcp-probe",
+    "version": "0.1.0"
+  },
+  "startedAt": "2026-11-12T14:25:14.591Z",
+  "finishedAt": "2026-11-12T14:25:15.598Z",
+  "target": {
+    "transport": "stdio",
+    "command": "node",
+    "args": [
+      "test/fixtures/servers/empty-tools.js"
+    ]
+  },
+  "status": "WARNING",
+  "server": {
+    "name": "fixture-server",
+    "version": "1.0.0",
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "tools": {}
+    },
+    "instructionsPresent": true
+  },
+  "timings": {
+    "connectMs": 6,
+    "initializeMs": 223,
+    "toolsListMs": 76,
+    "totalMs": 1007
+  },
+  "tools": {
+    "count": 0,
+    "pages": 1,
+    "items": []
+  },
+  "findings": [
+    {
+      "id": "TOOLS_EMPTY",
+      "severity": "warning",
+      "category": "tools",
+      "message": "No tools were returned."
+    }
+  ],
+  "failure": null
+}

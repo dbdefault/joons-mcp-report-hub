@@ -1,0 +1,32 @@
+{
+  "format": "joons-mcp-policy-gate/result",
+  "schemaVersion": 1,
+  "verdict": "PASS",
+  "date": "2027-06-30",
+  "policy": {
+    "name": "strict-readonly",
+    "policyVersion": 1
+  },
+  "snapshot": {
+    "label": "docs-search",
+    "server": {
+      "name": "docs-search-server",
+      "version": "1.0.0"
+    },
+    "toolCount": 3
+  },
+  "summary": {
+    "tools": 3,
+    "fail": 0,
+    "warn": 0,
+    "rules": [
+      "annotations_missing",
+      "approval_unused",
+      "description_missing",
+      "description_too_short",
+      "tool_denied"
+    ]
+  },
+  "findings": [],
+  "classifications": []
+}

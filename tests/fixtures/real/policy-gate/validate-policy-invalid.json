@@ -1,0 +1,21 @@
+{
+  "format": "joons-mcp-policy-gate/policy-validation",
+  "schemaVersion": 1,
+  "ok": false,
+  "errors": [
+    {
+      "path": "",
+      "message": "policy enables no checks; risk classes without requireApproval only label tools"
+    },
+    {
+      "path": "/unknownSection",
+      "message": "Unknown key."
+    }
+  ],
+  "warnings": [
+    {
+      "path": "/tools/allow",
+      "message": "this rule can never produce a finding"
+    }
+  ]
+}

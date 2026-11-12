@@ -1,0 +1,176 @@
+{
+  "after": {
+    "label": "after",
+    "server": {
+      "name": "fixture",
+      "protocolVersion": "2025-11-25",
+      "version": "1.0.0"
+    },
+    "toolCount": 4
+  },
+  "before": {
+    "label": "before",
+    "server": {
+      "name": "fixture",
+      "protocolVersion": "2025-11-25",
+      "version": "1.0.0"
+    },
+    "toolCount": 4
+  },
+  "format": "joons-mcp-diff/result",
+  "renameHints": [
+    {
+      "from": "delete_item",
+      "reason": "same input schema",
+      "similarity": 0.7818181818181817,
+      "to": "remove_item"
+    }
+  ],
+  "schemaVersion": 1,
+  "summary": {
+    "added": 1,
+    "breaking": 4,
+    "changed": 3,
+    "nonBreaking": 3,
+    "removed": 1,
+    "risk": "high",
+    "unchanged": 0,
+    "unknown": 1
+  },
+  "tools": [
+    {
+      "changes": [
+        {
+          "after": [],
+          "before": [
+            "c"
+          ],
+          "kind": "enum_values_removed",
+          "message": "enum values removed",
+          "path": "/properties/kind/enum",
+          "severity": "BREAKING"
+        },
+        {
+          "after": [
+            "d"
+          ],
+          "before": [],
+          "kind": "enum_values_added",
+          "message": "enum values added",
+          "path": "/properties/kind/enum",
+          "severity": "NON_BREAKING"
+        }
+      ],
+      "name": "create_item",
+      "status": "changed"
+    },
+    {
+      "changes": [
+        {
+          "after": null,
+          "before": {
+            "annotations": null,
+            "description": null,
+            "inputSchema": {
+              "properties": {
+                "id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id"
+              ],
+              "type": "object"
+            },
+            "name": "delete_item",
+            "outputSchema": null,
+            "title": null
+          },
+          "kind": "tool_removed",
+          "message": "tool removed",
+          "path": "",
+          "severity": "BREAKING"
+        }
+      ],
+      "name": "delete_item",
+      "status": "removed"
+    },
+    {
+      "changes": [
+        {
+          "after": "Check service availability.",
+          "before": "Check service status.",
+          "kind": "description_changed",
+          "message": "description changed",
+          "path": "/description",
+          "severity": "NON_BREAKING"
+        }
+      ],
+      "name": "ping_tool",
+      "status": "changed"
+    },
+    {
+      "changes": [
+        {
+          "after": {
+            "annotations": null,
+            "description": null,
+            "inputSchema": {
+              "properties": {
+                "id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id"
+              ],
+              "type": "object"
+            },
+            "name": "remove_item",
+            "outputSchema": null,
+            "title": null
+          },
+          "before": null,
+          "kind": "tool_added",
+          "message": "tool added",
+          "path": "",
+          "severity": "NON_BREAKING"
+        }
+      ],
+      "name": "remove_item",
+      "status": "added"
+    },
+    {
+      "changes": [
+        {
+          "after": "locale",
+          "before": null,
+          "kind": "required_added",
+          "message": "required added",
+          "path": "/required/locale",
+          "severity": "BREAKING"
+        },
+        {
+          "after": 50,
+          "before": 100,
+          "kind": "constraint_changed",
+          "message": "Combined numeric interval tightened",
+          "path": "/properties/limit/maximum",
+          "severity": "BREAKING"
+        },
+        {
+          "after": {
+            "type": "string"
+          },
+          "before": null,
+          "kind": "property_added",
+          "message": "New named constraints may reject values previously allowed as additional properties; inclusion is unproved",
+          "path": "/properties/locale",
+          "severity": "UNKNOWN"
+        }
+      ],
+      "name": "search",
+      "status": "changed"
+    }
+  ]
+}

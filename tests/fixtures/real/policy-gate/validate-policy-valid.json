@@ -1,0 +1,7 @@
+{
+  "format": "joons-mcp-policy-gate/policy-validation",
+  "schemaVersion": 1,
+  "ok": true,
+  "errors": [],
+  "warnings": []
+}

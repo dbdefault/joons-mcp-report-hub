@@ -1,0 +1,80 @@
+{
+  "format": "joons-mcp-contract-test/report",
+  "schemaVersion": 1,
+  "verdict": "FAIL",
+  "suite": {
+    "name": "Survey failing suite",
+    "tests": 4
+  },
+  "target": {
+    "type": "mock",
+    "server": {
+      "name": "joons-mcp-mock-server",
+      "title": "MOCK of fictional-shop",
+      "version": "0.1.0"
+    },
+    "protocolVersion": "2025-11-25"
+  },
+  "summary": {
+    "total": 4,
+    "passed": 0,
+    "failed": 3,
+    "skipped": 1,
+    "durationMs": 274
+  },
+  "results": [
+    {
+      "id": "wrong-text",
+      "tool": "search_products",
+      "status": "FAIL",
+      "durationMs": 4,
+      "reason": null,
+      "failures": [
+        {
+          "assertion": "text.equals",
+          "expected": "Completely different text.",
+          "actual": "Mock boots found.",
+          "message": "text.equals failed"
+        }
+      ]
+    },
+    {
+      "id": "dependent-skip",
+      "tool": "get_product",
+      "status": "SKIP",
+      "durationMs": 0,
+      "reason": "capture unavailable",
+      "failures": []
+    },
+    {
+      "id": "unexpected-shape",
+      "tool": "get_product",
+      "status": "FAIL",
+      "durationMs": 1,
+      "reason": null,
+      "failures": [
+        {
+          "assertion": "fields/price.type",
+          "expected": "number",
+          "actual": "undefined",
+          "message": "fields/price.type failed"
+        }
+      ]
+    },
+    {
+      "id": "missing-tool-call",
+      "tool": "no_such_tool",
+      "status": "FAIL",
+      "durationMs": 0,
+      "reason": "tool not listed",
+      "failures": [
+        {
+          "assertion": "tool",
+          "expected": "no_such_tool",
+          "actual": null,
+          "message": "tool not listed"
+        }
+      ]
+    }
+  ]
+}

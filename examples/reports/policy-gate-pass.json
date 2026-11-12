@@ -1,0 +1,30 @@
+{
+  "format": "joons-mcp-policy-gate/result",
+  "schemaVersion": 1,
+  "verdict": "PASS",
+  "date": "2027-01-01",
+  "policy": {
+    "name": "Survey pass policy",
+    "policyVersion": 1
+  },
+  "snapshot": {
+    "label": "project-tracker",
+    "server": {
+      "name": "project-tracker",
+      "version": "1.0.0"
+    },
+    "toolCount": 8
+  },
+  "summary": {
+    "tools": 8,
+    "fail": 0,
+    "warn": 0,
+    "rules": [
+      "approval_unused",
+      "max_tools_exceeded",
+      "tool_not_allowed"
+    ]
+  },
+  "findings": [],
+  "classifications": []
+}

@@ -1,0 +1,12 @@
+{
+  "format": "joons-mcp-contract-test/validation",
+  "schemaVersion": 1,
+  "ok": false,
+  "errors": [
+    {
+      "path": "/bogusSection",
+      "message": "Unknown key"
+    }
+  ],
+  "warnings": []
+}

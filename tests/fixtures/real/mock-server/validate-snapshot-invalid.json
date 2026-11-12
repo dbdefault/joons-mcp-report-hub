@@ -1,0 +1,1 @@
+{"format":"joons-mcp-mock-server/validation","schemaVersion":1,"ok":false,"errors":["/format : invalid format","/createdAt : expected ISO date","/tool : expected object","/stats : expected object"],"warnings":[]}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "tool": {
+    "name": "joons-mcp-probe",
+    "version": "0.1.0"
+  },
+  "startedAt": "2026-11-12T14:26:25.299Z",
+  "finishedAt": "2026-11-12T14:26:26.318Z",
+  "target": {
+    "transport": "stdio",
+    "command": "node",
+    "args": [
+      "test/fixtures/servers/echo-secret.js"
+    ]
+  },
+  "status": "WARNING",
+  "server": {
+    "name": "fixture-server",
+    "version": "1.0.0",
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "tools": {}
+    },
+    "instructionsPresent": true
+  },
+  "timings": {
+    "connectMs": 6,
+    "initializeMs": 227,
+    "toolsListMs": 103,
+    "totalMs": 1019
+  },
+  "tools": {
+    "count": 1,
+    "pages": 1,
+    "items": [
+      {
+        "name": "secret",
+        "hasDescription": true,
+        "schemaValid": true
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "SECRET_IN_RESPONSE",
+      "severity": "warning",
+      "category": "security",
+      "message": "A supplied secret appeared in server output"
+    }
+  ],
+  "failure": null
+}

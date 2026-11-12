@@ -1,0 +1,1 @@
+{"format":"joons-mcp-mock-server/validation","schemaVersion":1,"ok":false,"errors":["/tools/create_order/unknown_key : unknown key","/tools/not_a_tool_in_snapshot : tool not in snapshot"],"warnings":[]}

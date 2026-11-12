@@ -1,0 +1,43 @@
+{
+  "format": "joons-mcp-contract-test/report",
+  "schemaVersion": 1,
+  "verdict": "PASS",
+  "suite": {
+    "name": "Shop checkout outage",
+    "tests": 2
+  },
+  "target": {
+    "type": "mock",
+    "server": {
+      "name": "joons-mcp-mock-server",
+      "title": "MOCK of fictional-shop",
+      "version": "0.1.0"
+    },
+    "protocolVersion": "2025-11-25"
+  },
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 264
+  },
+  "results": [
+    {
+      "id": "create-outage",
+      "tool": "create_order",
+      "status": "PASS",
+      "durationMs": 4,
+      "reason": null,
+      "failures": []
+    },
+    {
+      "id": "cancel-outage",
+      "tool": "cancel_order",
+      "status": "PASS",
+      "durationMs": 2,
+      "reason": null,
+      "failures": []
+    }
+  ]
+}

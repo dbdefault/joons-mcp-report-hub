@@ -1,0 +1,98 @@
+{
+  "format": "joons-mcp-contract-test/report",
+  "schemaVersion": 1,
+  "verdict": "PASS",
+  "suite": {
+    "name": "Shop contracts",
+    "tests": 8
+  },
+  "target": {
+    "type": "mock",
+    "server": {
+      "name": "joons-mcp-mock-server",
+      "title": "MOCK of fictional-shop",
+      "version": "0.1.0"
+    },
+    "protocolVersion": "2025-11-25"
+  },
+  "summary": {
+    "total": 9,
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 276
+  },
+  "results": [
+    {
+      "id": "#tools",
+      "status": "PASS",
+      "durationMs": 0,
+      "reason": null,
+      "failures": []
+    },
+    {
+      "id": "search-default",
+      "tool": "search_products",
+      "status": "PASS",
+      "durationMs": 4,
+      "reason": null,
+      "failures": []
+    },
+    {
+      "id": "search-[CAPTURED]",
+      "tool": "search_products",
+      "status": "PASS",
+      "durationMs": 1,
+      "reason": null,
+      "failures": []
+    },
+    {
+      "id": "get-captured",
+      "tool": "get_product",
+      "status": "PASS",
+      "durationMs": 1,
+      "reason": null,
+      "failures": []
+    },
+    {
+      "id": "customer",
+      "tool": "get_customer",
+      "status": "PASS",
+      "durationMs": 1,
+      "reason": null,
+      "failures": []
+    },
+    {
+      "id": "create",
+      "tool": "create_order",
+      "status": "PASS",
+      "durationMs": 1,
+      "reason": null,
+      "failures": []
+    },
+    {
+      "id": "cancel",
+      "tool": "cancel_order",
+      "status": "PASS",
+      "durationMs": 1,
+      "reason": null,
+      "failures": []
+    },
+    {
+      "id": "invalid-arguments",
+      "tool": "search_products",
+      "status": "PASS",
+      "durationMs": 1,
+      "reason": null,
+      "failures": []
+    },
+    {
+      "id": "unknown-tool",
+      "tool": "no_such_tool",
+      "status": "PASS",
+      "durationMs": 2,
+      "reason": null,
+      "failures": []
+    }
+  ]
+}

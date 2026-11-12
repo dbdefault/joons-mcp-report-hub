@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "tool": {
+    "name": "joons-mcp-probe",
+    "version": "0.1.0"
+  },
+  "startedAt": "2026-11-12T14:25:15.896Z",
+  "finishedAt": "2026-11-12T14:25:16.912Z",
+  "target": {
+    "transport": "stdio",
+    "command": "node",
+    "args": [
+      "test/fixtures/servers/bad-schema.js"
+    ]
+  },
+  "status": "FAIL",
+  "server": {
+    "name": "fixture-server",
+    "version": "1.0.0",
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "tools": {}
+    },
+    "instructionsPresent": true
+  },
+  "timings": {
+    "connectMs": 6,
+    "initializeMs": 222,
+    "toolsListMs": 97,
+    "totalMs": 1016
+  },
+  "tools": {
+    "count": 2,
+    "pages": 1,
+    "items": [
+      {
+        "name": "wrong_type",
+        "hasDescription": true,
+        "schemaValid": false
+      },
+      {
+        "name": "invalid_properties",
+        "hasDescription": true,
+        "schemaValid": false
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "TOOL_SCHEMA_NOT_OBJECT",
+      "severity": "fail",
+      "category": "schema",
+      "message": "Tool input schema must have type object.",
+      "tool": "wrong_type"
+    },
+    {
+      "id": "TOOL_SCHEMA_INVALID",
+      "severity": "fail",
+      "category": "schema",
+      "message": "Tool input schema could not be compiled.",
+      "tool": "invalid_properties"
+    }
+  ],
+  "failure": null
+}

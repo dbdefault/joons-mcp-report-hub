@@ -1,0 +1,98 @@
+{
+  "createdAt": "2026-11-12T14:26:56.044Z",
+  "format": "joons-mcp-diff/snapshot",
+  "label": "before",
+  "schemaVersion": 1,
+  "server": {
+    "name": "fixture",
+    "protocolVersion": "2025-11-25",
+    "version": "1.0.0"
+  },
+  "stats": {
+    "pages": 1,
+    "toolCount": 4
+  },
+  "tool": {
+    "name": "joons-mcp-diff",
+    "version": "0.1.0"
+  },
+  "tools": [
+    {
+      "annotations": null,
+      "description": null,
+      "inputSchema": {
+        "properties": {
+          "kind": {
+            "enum": [
+              "a",
+              "b",
+              "c"
+            ]
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "type": "object"
+      },
+      "name": "create_item",
+      "outputSchema": null,
+      "title": null
+    },
+    {
+      "annotations": null,
+      "description": null,
+      "inputSchema": {
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "type": "object"
+      },
+      "name": "delete_item",
+      "outputSchema": null,
+      "title": null
+    },
+    {
+      "annotations": null,
+      "description": "Check service status.",
+      "inputSchema": {
+        "properties": {},
+        "type": "object"
+      },
+      "name": "ping_tool",
+      "outputSchema": null,
+      "title": null
+    },
+    {
+      "annotations": null,
+      "description": null,
+      "inputSchema": {
+        "properties": {
+          "limit": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "type": "object"
+      },
+      "name": "search",
+      "outputSchema": null,
+      "title": null
+    }
+  ]
+}

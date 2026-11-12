@@ -1,0 +1,74 @@
+{
+  "format": "joons-mcp-contract-test/report",
+  "schemaVersion": 1,
+  "verdict": "FAIL",
+  "suite": {
+    "name": "Surveyor mixed outcomes",
+    "tests": 5
+  },
+  "target": {
+    "type": "mock",
+    "server": {
+      "name": "joons-mcp-mock-server",
+      "title": "MOCK of fictional-shop",
+      "version": "0.1.0"
+    },
+    "protocolVersion": "2025-11-25"
+  },
+  "summary": {
+    "total": 5,
+    "passed": 2,
+    "failed": 1,
+    "skipped": 2,
+    "durationMs": 0
+  },
+  "results": [
+    {
+      "id": "ok",
+      "tool": "get_product",
+      "status": "PASS",
+      "durationMs": 0,
+      "reason": null,
+      "failures": []
+    },
+    {
+      "id": "bad-expect",
+      "tool": "get_product",
+      "status": "FAIL",
+      "durationMs": 0,
+      "reason": null,
+      "failures": [
+        {
+          "assertion": "text.equals",
+          "expected": "Completely different text.",
+          "actual": "Mock product.",
+          "message": "text.equals failed"
+        }
+      ]
+    },
+    {
+      "id": "explicit-skip",
+      "tool": "get_product",
+      "status": "SKIP",
+      "durationMs": 0,
+      "reason": "demonstrating a skip reason",
+      "failures": []
+    },
+    {
+      "id": "capture-src",
+      "tool": "get_product",
+      "status": "PASS",
+      "durationMs": 0,
+      "reason": null,
+      "failures": []
+    },
+    {
+      "id": "capture-skip",
+      "tool": "get_product",
+      "status": "SKIP",
+      "durationMs": 0,
+      "reason": "capture unavailable",
+      "failures": []
+    }
+  ]
+}

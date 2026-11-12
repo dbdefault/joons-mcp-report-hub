@@ -1,0 +1,91 @@
+{
+  "format": "joons-mcp-mock-server/report",
+  "schemaVersion": 1,
+  "mock": true,
+  "server": {
+    "mockOf": "fictional-shop",
+    "snapshotToolCount": 5
+  },
+  "scenario": "default",
+  "totals": {
+    "calls": 5,
+    "byOutcome": {
+      "invalid_arguments": 1,
+      "result": 3,
+      "unknown_tool": 1
+    }
+  },
+  "tools": {
+    "<unknown tools>": {
+      "calls": 1,
+      "lastArguments": {}
+    },
+    "create_order": {
+      "calls": 1,
+      "lastArguments": {
+        "product_id": "p2"
+      }
+    },
+    "get_product": {
+      "calls": 2,
+      "lastArguments": {}
+    },
+    "search_products": {
+      "calls": 1,
+      "lastArguments": {
+        "query": "boots"
+      }
+    }
+  },
+  "lastCall": {
+    "seq": 5,
+    "tool": "nonexistent_tool",
+    "outcome": "unknown_tool",
+    "arguments": {}
+  },
+  "calls": [
+    {
+      "seq": 1,
+      "tool": "search_products",
+      "outcome": "result",
+      "source": "fixture_match",
+      "arguments": {
+        "query": "boots"
+      }
+    },
+    {
+      "seq": 2,
+      "tool": "get_product",
+      "outcome": "result",
+      "source": "fixture_default",
+      "arguments": {
+        "product_id": "p1",
+        "session": "[MASKED]"
+      }
+    },
+    {
+      "seq": 3,
+      "tool": "create_order",
+      "outcome": "result",
+      "source": "fixture_default",
+      "arguments": {
+        "product_id": "p2"
+      }
+    },
+    {
+      "seq": 4,
+      "tool": "get_product",
+      "outcome": "invalid_arguments",
+      "source": "validation",
+      "arguments": {}
+    },
+    {
+      "seq": 5,
+      "tool": "nonexistent_tool",
+      "outcome": "unknown_tool",
+      "source": "validation",
+      "arguments": {}
+    }
+  ],
+  "droppedCalls": 0
+}

@@ -1,0 +1,34 @@
+{
+  "after": {
+    "label": "before",
+    "server": {
+      "name": "fixture",
+      "protocolVersion": "2025-11-25",
+      "version": "1.0.0"
+    },
+    "toolCount": 4
+  },
+  "before": {
+    "label": "before",
+    "server": {
+      "name": "fixture",
+      "protocolVersion": "2025-11-25",
+      "version": "1.0.0"
+    },
+    "toolCount": 4
+  },
+  "format": "joons-mcp-diff/result",
+  "renameHints": [],
+  "schemaVersion": 1,
+  "summary": {
+    "added": 0,
+    "breaking": 0,
+    "changed": 0,
+    "nonBreaking": 0,
+    "removed": 0,
+    "risk": "none",
+    "unchanged": 4,
+    "unknown": 0
+  },
+  "tools": []
+}

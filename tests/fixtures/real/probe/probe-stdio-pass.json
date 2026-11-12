@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "tool": {
+    "name": "joons-mcp-probe",
+    "version": "0.1.0"
+  },
+  "startedAt": "2026-11-12T14:24:52.098Z",
+  "finishedAt": "2026-11-12T14:24:53.111Z",
+  "target": {
+    "transport": "stdio",
+    "command": "node",
+    "args": [
+      "examples/stdio-server.js"
+    ]
+  },
+  "status": "PASS",
+  "server": {
+    "name": "example-server",
+    "version": "1.0.0",
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "tools": {
+        "listChanged": true
+      }
+    },
+    "instructionsPresent": false
+  },
+  "timings": {
+    "connectMs": 6,
+    "initializeMs": 225,
+    "toolsListMs": 98,
+    "totalMs": 1014
+  },
+  "tools": {
+    "count": 1,
+    "pages": 1,
+    "items": [
+      {
+        "name": "hello",
+        "hasDescription": true,
+        "schemaValid": true
+      }
+    ]
+  },
+  "findings": [],
+  "failure": null
+}

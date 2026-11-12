@@ -1,0 +1,55 @@
+{
+  "format": "joons-mcp-policy-gate/result",
+  "schemaVersion": 1,
+  "verdict": "WARN",
+  "date": "2027-01-01",
+  "policy": {
+    "name": "Project tracker policy",
+    "policyVersion": 1
+  },
+  "snapshot": {
+    "label": "project-tracker",
+    "server": {
+      "name": "project-tracker",
+      "version": "1.0.0"
+    },
+    "toolCount": 8
+  },
+  "summary": {
+    "tools": 8,
+    "fail": 0,
+    "warn": 1,
+    "rules": [
+      "annotations_missing",
+      "approval_expired",
+      "approval_missing",
+      "approval_unused",
+      "description_missing",
+      "description_too_short",
+      "input_schema_invalid",
+      "max_tools_exceeded",
+      "required_tool_missing",
+      "tool_denied",
+      "tool_not_allowed"
+    ]
+  },
+  "findings": [
+    {
+      "rule": "description_missing",
+      "level": "warn",
+      "tool": "watch_issue",
+      "class": null,
+      "message": "Description is missing.",
+      "detail": {}
+    }
+  ],
+  "classifications": [
+    {
+      "tool": "delete_issue",
+      "classes": [
+        "destructive"
+      ],
+      "approval": "valid"
+    }
+  ]
+}

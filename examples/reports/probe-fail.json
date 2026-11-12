@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "tool": {
+    "name": "joons-mcp-probe",
+    "version": "0.1.0"
+  },
+  "startedAt": "2026-11-12T14:25:17.221Z",
+  "finishedAt": "2026-11-12T14:25:18.122Z",
+  "target": {
+    "transport": "stdio",
+    "command": "node",
+    "args": [
+      "test/fixtures/servers/handshake-fail.js"
+    ]
+  },
+  "status": "FAIL",
+  "server": null,
+  "timings": {
+    "connectMs": 6,
+    "initializeMs": 220,
+    "toolsListMs": null,
+    "totalMs": 901
+  },
+  "tools": null,
+  "findings": [],
+  "failure": {
+    "kind": "handshake_failed",
+    "step": "initialize",
+    "message": "MCP error -32603: fixture handshake failed",
+    "exitCode": null,
+    "stderrTail": ""
+  }
+}
