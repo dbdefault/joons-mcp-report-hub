@@ -79,7 +79,11 @@ export function collectInputs(
       }
       const names = [];
       for (const de of dirents) {
-        if (!de.isFile()) continue; // skips nested dirs, symlinks, sockets
+        if (de.isSymbolicLink() && de.name.endsWith('.json')) {
+          problems.push({ kind: 'symlink_skipped', detail: 'symlink inputs are skipped' });
+          continue;
+        }
+        if (!de.isFile()) continue; // skips nested dirs, sockets
         if (!de.name.endsWith('.json')) continue; // non-JSON ignored
         names.push(de.name);
       }
