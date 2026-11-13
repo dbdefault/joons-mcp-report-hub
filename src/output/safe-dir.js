@@ -46,7 +46,7 @@ function checkLinkComponents(abs) {
     }
     if (st.isSymbolicLink()) {
       // macOS ships /var, /tmp and /etc as system links to /private/*; the default temporary directory lives under /var.
-      if (process.platform === 'darwin' && (current === '/var' || current === '/tmp' || current === '/etc')) continue;
+      if (process.platform === 'darwin' && ['/var', '/tmp', '/etc'].includes(current.toLowerCase())) continue;
       throw new OutputError('output directory path contains a symbolic link', 'symlink_component');
     }
   }
