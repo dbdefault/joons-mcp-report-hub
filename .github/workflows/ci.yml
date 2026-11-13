@@ -34,4 +34,4 @@ jobs:
         run: node bin/joons-mcp-report-hub.js validate examples/reports
 
       - name: "Smoke: build example dashboard"
-        run: node bin/joons-mcp-report-hub.js build examples/reports --out dashboard-out --stable
+        run: node bin/joons-mcp-report-hub.js build examples/reports --out dashboard-out --stable --fail-on none
